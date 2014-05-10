@@ -10,7 +10,8 @@ A UITextView subclass that automatically resizes its frame when keyboard appears
 - Via [Cocoapods](http://cocoapods.org/):
 
 ```
-pod 'MYRTextView', git:'https://github.com/ocadaruma/MYRTextView.git'
+platform :ios, '6.0'
+pod 'MYRTextView'
 ```
 
 - Manually
