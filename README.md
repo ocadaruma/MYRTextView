@@ -5,6 +5,18 @@ MYRTextView
 
 A UITextView subclass that automatically resizes its frame when keyboard appears.
 
+#### Installation
+
+- Via [Cocoapods](http://cocoapods.org/):
+
+```
+pod 'MYRTextView', git:'https://github.com/ocadaruma/MYRTextView.git'
+```
+
+- Manually
+
+Copy MYRTextView.{h,m} to your project.
+
 #### Usage
 
 Example:
