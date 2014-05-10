@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import <MYRTextView.h>
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet MYRTextView *textView;
 
 @end
 
@@ -18,12 +21,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [_textView registerNotification];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)tap:(id)sender
+{
+    [_textView resignFirstResponder];
 }
 
 @end

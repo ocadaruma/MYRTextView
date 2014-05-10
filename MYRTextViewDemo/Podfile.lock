@@ -1,0 +1,14 @@
+PODS:
+  - MYRTextView (0.0.1)
+
+DEPENDENCIES:
+  - MYRTextView (from `..`)
+
+EXTERNAL SOURCES:
+  MYRTextView:
+    :path: ..
+
+SPEC CHECKSUMS:
+  MYRTextView: 713ee61f8e70cbbecb535143993d3e3f2bab4927
+
+COCOAPODS: 0.32.1
