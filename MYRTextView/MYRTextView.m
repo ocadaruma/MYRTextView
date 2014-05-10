@@ -47,13 +47,16 @@
     
     CGRect frameToRootView = [self convertRect:self.bounds toView:rootView];
     
-    //if keyboard and textView doesn't intersect, no need to resize.
-    if (!CGRectIntersectsRect(keyboardFrame, frameToRootView)) {
+    CGFloat newHeight = rootView.frame.size.height -
+                            (keyboardFrame.size.height + frameToRootView.origin.y);
+    
+    //if keyboard and textView doesn't intersect or
+    //keyboard covers textView all,
+    //no need to resize.
+    if (!CGRectIntersectsRect(keyboardFrame, frameToRootView) || newHeight <= 0) {
         return;
     }
     
-    CGFloat newHeight = MAX(0, rootView.frame.size.height -
-                            (keyboardFrame.size.height + frameToRootView.origin.y));
     CGRect newFrameToRootView = CGRectMake(frameToRootView.origin.x,
                                            frameToRootView.origin.y,
                                            self.frame.size.width, newHeight);

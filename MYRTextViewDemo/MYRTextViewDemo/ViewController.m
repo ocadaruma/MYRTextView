@@ -17,11 +17,16 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [super viewWillAppear:animated];
     [_textView registerNotification];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [_textView unregisterNotification];
 }
 
 - (void)didReceiveMemoryWarning
