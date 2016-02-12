@@ -7,7 +7,7 @@ A UITextView subclass that automatically resizes its frame when keyboard appears
 
 #### Installation
 
-- Via [Cocoapods](http://cocoapods.org/):
+- Via [CocoaPods](http://cocoapods.org/):
 
 ```
 platform :ios, '6.0'
